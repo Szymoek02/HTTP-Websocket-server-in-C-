@@ -150,7 +150,7 @@ void handle_conn(SOCKET* pclient)
     if(strstr(buff, http_connection) && strstr(buff, http_upgrade))
     {
         cout << "Websocket connection!\n";
-        // response = "";
+        
 
         char* ws_key_start = strstr(buff, "Sec-WebSocket-Key: ");
         ws_key_start += 19;
